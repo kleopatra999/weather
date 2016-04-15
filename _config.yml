@@ -38,7 +38,7 @@ feature_image_width: 50
 
 # Project
 project_image: https://s3.amazonaws.com/kinlane-productions/api-stack/icons/bw-weather.png
-project_summary: Research into weather APIs.
+project_summary: This is my research into weather APIs, trying to understand how APIs are being done in the sector. I will be aggregating all the companies, their APIs, tooling, and other information here for use in my research, and guides.
 
 # Navigation
 navigation:
