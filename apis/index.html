@@ -1,0 +1,71 @@
+---
+layout: page
+title: APIs
+---
+
+<p>Companies with APIs that are included in this {{ site.title }} research, with API detail when it exists.</p>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="2" border="1">
+  {% for org in site.data.organizations %}
+  <tr>
+    <td align="left" width="80%" style="border-top: 1px solid #CCC; padding-top:18px;">
+      <a href="{{ org.website }}" id="home-logo-link-18911"><img src="{{ org.logo }}" width="{{ org.logo_width }}" align="left" style="padding: 15px;" /></a>
+      <a href="{{ org.website }}" id="home-name-link-18911" style="color: #000;"><strong>{{ org.name }}</strong></a>
+      <span style="font-size: 12px;">{{ org.details }}</span>
+        {% if org.tags != empty %}(<span style="font-size: 12px;"><i>{% for tag in org.tags %}{{ tag }}{% if forloop.last == true %}{% else %}, {% endif %}{% endfor %}</i></span>)
+      {% endif %}
+    </td>
+    <td width="50" align="center" style="border-top: 1px solid #CCC;">
+      {% if org.website != empty %}
+        <a href="{{ org.website }}" target="_blank" title="Website"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-home-icon.jpeg" width="28" align="center" /></a>
+      {% endif %}
+    </td>
+    <td width="50" align="center" style="border-top: 1px solid #CCC;">
+      {% if org.blog != empty %}
+        <a href="{{ org.blog }}" target="_blank" title="Blog"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-blog-icon.png" width="33" align="center" /></a>
+      {% endif %}
+    </td>
+    <td width="50" align="center" style="border-top: 1px solid #CCC;">
+      {% if org.blogrss != empty %}
+        <a href="{{ org.blogrss }}" target="_blank" title="Blog RSS"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-rss-icon.png" width="33" align="center" /></a>
+      {% endif %}
+    </td>
+    <td width="50" align="center" style="border-top: 1px solid #CCC;">
+      {% if org.twitter != empty %}
+        <a href="{{ org.twitter }}" target="_blank" title="Twitter"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-twitter-icon.png" width="33" align="center" /></a>
+      {% endif %}
+    </td>
+    <td width="50" align="center" style="border-top: 1px solid #CCC;">
+      {% if org.github != empty %}
+        <a href="{{ org.github }}" target="_blank" title="Github"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-github-icon.png" width="28" align="center" /></a>
+      {% endif %}
+    </td>
+    <td width="50" align="center" style="border-top: 1px solid #CCC;"></td>
+    <td width="150" align="center" style="font-size: 11px;" style="border-top: 1px solid #CCC;"></td>
+  </tr>
+    {% for api in org.apis %}
+      <tr>
+        <td align="left" style="font-size: 11px; padding-left: 20px;" width="35%">
+          {{ api.name }}
+        </td>
+        <td width="50" align="center"></td>
+        <td width="50" align="center">
+          {% if api.openapi-spec != empty %}
+            <a href="{{ api.openapi-spec }}" target="_blank" title="OpenAPI Spec"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-swagger-round.png" width="25" /></a></td>
+          {% endif %}
+        <td width="50" align="center">
+          {% if api.api-blueprint != empty %}
+            <a href="{{ api.api-blueprint }}" target="_blank" title="API Blueprint"><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-api-blueprint-icon.png" width="25" /></a></td>
+          {% endif %}
+        <td width="50" align="center">
+          {% if api.postman != empty %}
+            <a href="{{ api.postman }}" target="_blank" title="API Blueprint"><img src="https://s3.amazonaws.com/kinlane-productions/building-blocks/x-postman.png" width="25" /></a></td>
+          {% endif %}
+        <td width="50" align="center"></td>
+        <td width="50" align="center"></td>
+        <td width="50" align="center"></td>
+        <td width="50" align="center"></td>
+      </tr>
+    {% endfor %}
+  {% endfor %}
+</table>

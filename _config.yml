@@ -31,10 +31,10 @@ masthead_font_size: 75
 masthead_title: '{"Weather APIs"}'
 
 # Feature
-feature_title: API Design Providers Guide
-feature_link: http://apis.how/xzca4kr2wb
-feature_image_source: https://s3.amazonaws.com/kinlane-productions/whitepapers/3scale/report-image-api-design.png
-feature_image_width: 45
+feature_title: API Guide
+feature_link: http://apievangelist.com
+feature_image_source: https://s3.amazonaws.com/kinlane-productions/whitepapers/api-guides-loading.jpg
+feature_image_width: 50
 
 # Project
 project_image: https://s3.amazonaws.com/kinlane-productions/api-stack/icons/bw-weather.png
@@ -60,12 +60,12 @@ navigation:
     size2: 60
     padding: 2
     decorate: 0
-  - label1: Organizations
-    link1: /companies.html
+  - label1: APIs
+    link1: /apis/
     size1: 80
     extend: 1
     label2: JSON
-    link2: /data/companies.json
+    link2: /data/organizations.json
     size2: 60
     padding: 0
     decorate: 0
@@ -96,7 +96,12 @@ footernavigation:
   - label: Contact
     link: http://kinlane.com/contacts/
 
-# sponsors
-sponsors_margin_top: 15
-sponsors_padding_top: 10
+## sponsors
+sponsors_margin_top: 3
+sponsors_padding_top: 3
 sponsors_json_url: https://s3.amazonaws.com/kinlane-productions/json/sponsors.json
+
+# support
+support_title: Support My Weather API Research
+support_header: I depend on the support of my partners to fund my work as an independent analysts. I have been monitoring the world of APIs since July of 2010 through the support of my partners, and a handful of writing or consulting projects along the way. If you find what I do valuable, please help support me by purchasing my guides, giving below, or if there are specific aspects of weather APIs you'd like me to focus on, let me know, and maybe we can find a way to provide you with what you are looking for.
+support_footer: I pay my bills by consulting on API projects, and writing white papers and guides. You can find much of my reshipping freely available across my website(s). Let me know how I can make my weather API research more valuable to you. Thank you for your support, and feel free to ping me directly if you have more questions.
